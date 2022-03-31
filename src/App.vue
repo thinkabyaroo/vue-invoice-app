@@ -2,6 +2,9 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
+        <figure class="text-center">
+          <img src="./assets/logo.png" alt="">
+        </figure>
         <h3 class="text-center my-3">Invoice Maker</h3>
         <form class="hide-in-print" action="" @submit.prevent="saveRecord">
           <div class="row g-2">
@@ -147,7 +150,8 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
 $font-family-sans-serif : 'Oswald', sans-serif;
-$primary:pink;
+$primary:#198754;
+$secondary:#343a40;
 
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
@@ -157,10 +161,11 @@ $primary:pink;
   .show-in-print{
     display: none;
   }
+
 }
 @media print {
   .hide-in-print{
-    display: none;
+    display: none !important;
   }
   .show-in-print{
     display: block;
